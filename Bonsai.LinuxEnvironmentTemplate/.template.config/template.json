@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Bonsai",
+    "classifications": [ "Bonsai", "Linux", "Environment" ],
+    "description": "A template for bootstrapping a Bonsai linux environment",
+    "identity": "Bonsai.LinuxEnvironmentTemplate",
+    "name": "Bonsai Linux Environment",
+    "tags": {
+        "type": "project"
+    },
+    "postActions": [{
+        "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+        "description": "Initializes the bonsai environment in Linux.",
+        "manualInstructions": [{
+            "text": "Run the 'Setup.ps1' or 'Setup.cmd' scripts."
+        }],
+        "args": {
+            "executable": "pwsh",
+            "args": "-File Setup.ps1",
+            "redirectStandardOutput": false
+        }
+          
+    }],
+    "shortName": "bonsaienvl",
+    "preferNameDirectory": true
+}
