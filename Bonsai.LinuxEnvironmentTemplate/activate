@@ -1,8 +1,8 @@
 #!/bin/bash
 # activate.sh
-if [[ -z "${BONSAI_EXE_PATH}" ]]; then
-    echo "Error! Cannot have multiple bonsai environments activated at the same time. Please deactivate the previous environment before activating the new one."
-    exit 125
+if [[ -v BONSAI_EXE_PATH ]]; then
+    echo "Error! Cannot have multiple bonsai environments activated at the same time. Please deactivate the current environment before activating the new one."
+    return
 fi
 BONSAI_ENV_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 export BONSAI_EXE_PATH="$BONSAI_ENV_DIR/Bonsai.exe"
