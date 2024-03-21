@@ -12,15 +12,17 @@
         "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
         "description": "Initializes the bonsai environment in Linux.",
         "manualInstructions": [{
-            "text": "Run the 'Setup.ps1' or 'Setup.cmd' scripts."
+            "text": "Run the 'Setup.sh' script."
         }],
         "args": {
-            "executable": "pwsh",
-            "args": "-File Setup.ps1",
+            "executable": "bash",
+            "args": "Setup.sh",
             "redirectStandardOutput": false
-        }
-          
+        },
+        "applyFileRenamesToArgs": [ "args" ]
     }],
+    "sourceName": ".bonsai",
+    "defaultName": ".bonsai",
     "shortName": "bonsaienvl",
-    "preferNameDirectory": true
+    "preferDefaultName": true
 }
