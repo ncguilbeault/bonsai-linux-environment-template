@@ -4,6 +4,7 @@
     "classifications": [ "Bonsai", "Linux", "Environment" ],
     "description": "A template for bootstrapping a Bonsai linux environment",
     "identity": "Bonsai.LinuxEnvironmentTemplate",
+    "shortName": "bonsaienvl",
     "name": "Bonsai Linux Environment",
     "tags": {
         "type": "project"
@@ -16,13 +17,15 @@
         }],
         "args": {
             "executable": "bash",
-            "args": "Setup.sh",
+            "args": ".bonsai/Setup.sh",
             "redirectStandardOutput": false
         },
         "applyFileRenamesToArgs": [ "args" ]
     }],
     "sourceName": ".bonsai",
+    "sources": [{
+        "target": "./.bonsai"
+    }],
     "defaultName": ".bonsai",
-    "shortName": "bonsaienvl",
     "preferDefaultName": true
 }
