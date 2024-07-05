@@ -7,7 +7,6 @@ This repo is a version of the Bonsai.EnvironmentTemplate that supports automatic
 Requirements:
 
 - [dotnet-sdk](https://dotnet.microsoft.com/en-us/download)
-- [powershell on linux](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.4)
 - [mono](https://www.mono-project.com/docs/getting-started/install/linux/)
 
 Clone the repo:
@@ -24,7 +23,7 @@ Install dotnet template:
 
 To setup a bonsai linux environment in a specific repo, use:
 
-`dotnet new bonsaienvl -o .bonsai`
+`dotnet new bonsaienvl`
 
 When prompted to run the `Setup.sh` script, enter yes. This will create a localized bonsai environment in a hidden subfolder called `.bonsai`.
 
@@ -40,4 +39,3 @@ You should see that the bonsai environment has been created. The following alias
 
 > [!TIP]
 > Activation of the bonsai environment can be used together with python virtual environments, but note that the python venv must be activated **first** before activating the bonsai environment, otherwise it will not work. Deactivating envronments will follow the reverse order in which the environments were activated.
-
