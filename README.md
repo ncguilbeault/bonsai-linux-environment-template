@@ -27,6 +27,9 @@ To setup a bonsai linux environment in a specific repo, use:
 
 When prompted to run the `Setup.sh` script, enter yes. This will create a localized bonsai environment in a hidden subfolder called `.bonsai`.
 
+> [!TIP]
+> If you append the `--allow-scripts yes` flag to the command above, this will automatically execute the startup script without requiring additional input
+
 You can then activate this bonsai environment, similar to how you would activate a python environment by running:
 
 `source .bonsai/activate`
