@@ -1,6 +1,6 @@
 # bonsai-linux-environment-template
 
-This repo is a version of the Bonsai.EnvironmentTemplate that supports automatic creation of bonsai environments in a linux OS. It adds an activation and deactivation script which places a convenient alias to bonsai in the command prompt when activated.
+This repo is a version of the Bonsai.EnvironmentTemplate that supports automatic creation of bonsai environments on Linux. It adds an activation and deactivation script which places a convenient alias to bonsai in the command prompt when activated. The tool has only been tested on Ubuntu 22.04, and may require modifications to work on other operating systems.
 
 ### Installation
 
@@ -8,6 +8,15 @@ Requirements:
 
 - [dotnet-sdk](https://dotnet.microsoft.com/en-us/download)
 - [mono](https://www.mono-project.com/docs/getting-started/install/linux/)
+- [xmllint]()
+- [xmlstarlet]
+
+> [!TIP]
+> You can install `xmllint` and `xmlstarlet` on Ubuntu with the following:
+
+```cmd
+sudo apt install -y libxml2-utils xmlstarlet
+```
 
 Clone the repo:
 
