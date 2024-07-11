@@ -9,6 +9,15 @@
     "tags": {
         "type": "project"
     },
+    "symbols": {
+        "version": {
+            "type": "parameter",
+            "datatype": "string",
+            "defaultValue": "latest",
+            "description": "The version of Bonsai to install.",
+            "replaces": "$SETUP_VERSION"
+        }
+    },
     "postActions": [{
         "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
         "description": "Initializes the bonsai environment in Linux.",
@@ -20,7 +29,7 @@
             "args": ".bonsai/Setup.sh",
             "redirectStandardOutput": false
         },
-        "applyFileRenamesToArgs": [ "args" ]
+        "applyFileRenamesToArgs": ["args"]
     }],
     "sourceName": ".bonsai",
     "sources": [{
