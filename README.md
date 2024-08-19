@@ -8,31 +8,48 @@ Requirements:
 
 - [dotnet-sdk](https://dotnet.microsoft.com/en-us/download)
 - [mono](https://www.mono-project.com/docs/getting-started/install/linux/)
-- [xmllint]()
-- [xmlstarlet]
+- [xmllint](https://packages.debian.org/buster/libxml2-utils) for using Bonsai <= 2.8.3.
+- [xmlstarlet](https://packages.debian.org/buster/xmlstarlet) for using Bonsai <= 2.8.3.
+
+> [!NOTE]
+> The latest versions of Bonsai do not require the [xmllint](https://packages.debian.org/buster/libxml2-utils) and [xmlstarlet](https://packages.debian.org/buster/xmlstarlet) packages, since the issue of OS-dependent paths in the Bonsai.config file was solved in the Bonsai 2.8.4 release. See discussion of the issue [here](https://github.com/bonsai-rx/bonsai/pull/1893).
 
 > [!TIP]
 > You can install `xmllint` and `xmlstarlet` on Ubuntu with the following:
-
-```cmd
-sudo apt install -y libxml2-utils xmlstarlet
-```
+> ```cmd
+> sudo apt install -y libxml2-utils xmlstarlet
+> ```
 
 Clone the repo:
 
-`git clone https://github.com/ncguilbeault/bonsai-linux-environment-template.git`
+```cmd
+git clone https://github.com/ncguilbeault/bonsai-linux-environment-template.git
+```
 
 Change directory to template folder:
 
-`cd /path/to/bonsai-linux-environment-template`
+```cmd
+cd /path/to/bonsai-linux-environment-template
+```
 
 Install dotnet template:
 
-`dotnet new install Bonsai.LinuxEnvironmentTemplate`
+```cmd
+dotnet new install Bonsai.LinuxEnvironmentTemplate
+```
 
 To setup a bonsai linux environment in a specific repo, use:
 
-`dotnet new bonsaienvl`
+```cmd
+dotnet new bonsaienvl
+```
+
+You can specify the version of Bonsai you wish to install using:
+
+```cmd
+dotnet new bonsaienvl --version latest // this uses the latest release version, or
+dotnet new bonsaienvl --version 2.8.5 // specify the exact version of bonsai to install
+```
 
 When prompted to run the `Setup.sh` script, enter yes. This will create a localized bonsai environment in a hidden subfolder called `.bonsai`.
 
