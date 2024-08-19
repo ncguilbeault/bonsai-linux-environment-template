@@ -58,7 +58,9 @@ When prompted to run the `Setup.sh` script, enter yes. This will create a locali
 
 You can then activate this bonsai environment, similar to how you would activate a python environment by running:
 
-`source .bonsai/activate`
+```cmd
+source .bonsai/activate
+```
 
 You should see that the bonsai environment has been created. The following aliases are then added to the list of terminal commands:
 
