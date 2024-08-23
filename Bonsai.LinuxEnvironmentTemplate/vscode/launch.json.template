@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        },
+        {
+            "name": "Launch Bonsai",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "/usr/bin/bash",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "${workspaceFolder}/.bonsai/run"
+            ],
+            "env": {
+                "BONSAI_EXE_PATH": "${workspaceFolder}/.bonsai/Bonsai.exe",
+                "GTK_DATA_PREFIX": "None"
+            }
+        }
+
+    ]
+}

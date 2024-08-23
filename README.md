@@ -44,13 +44,6 @@ To setup a bonsai linux environment in a specific repo, use:
 dotnet new bonsaienvl
 ```
 
-You can specify the version of Bonsai you wish to install using:
-
-```cmd
-dotnet new bonsaienvl --version latest // this uses the latest release version, or
-dotnet new bonsaienvl --version 2.8.5 // specify the exact version of bonsai to install
-```
-
 When prompted to run the `Setup.sh` script, enter yes. This will create a localized bonsai environment in a hidden subfolder called `.bonsai`.
 
 > [!TIP]
@@ -70,3 +63,16 @@ You should see that the bonsai environment has been created. The following alias
 
 > [!TIP]
 > Activation of the bonsai environment can be used together with python virtual environments, but note that the python venv must be activated **first** before activating the bonsai environment, otherwise it will not work. Deactivating envronments will follow the reverse order in which the environments were activated.
+
+You can specify the version of Bonsai you wish to install using:
+
+```cmd
+dotnet new bonsaienvl --version latest // this uses the latest release version, or
+dotnet new bonsaienvl --version 2.8.5 // specify the exact version of bonsai to install
+```
+
+By default, the tool will add a `.vscode/launch.settings` file. This file tells vscode how to run the C# debugger with the bonsai executable. You can turn this behaviour off when creating the template using:
+
+```cmd
+dotnet new bonsaienvl --include-vscode-debugger-config false
+```

@@ -16,6 +16,12 @@
             "defaultValue": "latest",
             "description": "The version of Bonsai to install.",
             "replaces": "$SETUP_VERSION"
+        },
+        "include-vscode-debugger-config": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "true",
+            "description": "Include debugger configuration files"
         }
     },
     "postActions": [{
@@ -31,10 +37,16 @@
         },
         "applyFileRenamesToArgs": ["args"]
     }],
-    "sourceName": ".bonsai",
     "sources": [{
+        "source": "./scripts",
         "target": "./.bonsai"
-    }],
-    "defaultName": ".bonsai",
-    "preferDefaultName": true
+    },
+    {
+        "source": "./vscode",
+        "target": "./.vscode",
+        "rename": {
+            "launch.json.template": "launch.json"
+        },
+        "condition": "(include-vscode-debugger-config)"
+    }]
 }
