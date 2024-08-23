@@ -13,13 +13,13 @@
             "program": "/usr/bin/bash",
             "cwd": "${workspaceFolder}",
             "args": [
-                "${workspaceFolder}/.bonsai/run",
+                "${workspaceFolder}/.bonsai/run"
             ],
             "env": {
                 "BONSAI_EXE_PATH": "${workspaceFolder}/.bonsai/Bonsai.exe",
-                "GTK_DATA_PREFIX": "None",
+                "GTK_DATA_PREFIX": "None"
             }
-        },
+        }
 
     ]
 }
