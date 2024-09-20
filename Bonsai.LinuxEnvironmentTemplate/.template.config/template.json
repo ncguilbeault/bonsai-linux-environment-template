@@ -6,9 +6,16 @@
     "identity": "Bonsai.LinuxEnvironmentTemplate",
     "shortName": "bonsaienvl",
     "name": "Bonsai Linux Environment",
+    "sourceName": "Bonsai.LinuxEnvironmentTemplate",
     "tags": {
         "type": "project"
     },
+    "parameters": [{
+        "name": "skip-script",
+        "type": "bool",
+        "defaultValue": "false",
+        "description": "Skip running the post-action script"
+    }],
     "symbols": {
         "version": {
             "type": "parameter",
@@ -26,6 +33,7 @@
     },
     "postActions": [{
         "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+        "condition": "(!skip-script)",
         "description": "Initializes the bonsai environment in Linux.",
         "manualInstructions": [{
             "text": "Run the 'Setup.sh' script."
