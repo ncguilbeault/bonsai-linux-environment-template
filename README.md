@@ -71,8 +71,8 @@ dotnet new bonsaienvl --version latest // this uses the latest release version, 
 dotnet new bonsaienvl --version 2.8.5 // specify the exact version of bonsai to install
 ```
 
-By default, the tool will add a `.vscode/launch.settings` file. This file tells vscode how to run the C# debugger with the bonsai executable. You can turn this behaviour off when creating the template using:
+By default, the tool will not add a `.vscode/launch.settings` file. If added, this file tells vscode how to run the C# debugger with the bonsai executable. You can add this to your repo when creating the template using:
 
 ```cmd
-dotnet new bonsaienvl --include-vscode-debugger-config false
+dotnet new bonsaienvl --include-vscode-debugger-config true
 ```
