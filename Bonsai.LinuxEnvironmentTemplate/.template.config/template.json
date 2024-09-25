@@ -20,8 +20,8 @@
         "include-vscode-debugger-config": {
             "type": "parameter",
             "datatype": "bool",
-            "defaultValue": "true",
-            "description": "Include debugger configuration files"
+            "defaultValue": "false",
+            "description": "Include vscode debugger configuration files"
         }
     },
     "postActions": [{
