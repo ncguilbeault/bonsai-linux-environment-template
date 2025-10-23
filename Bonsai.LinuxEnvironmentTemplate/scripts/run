@@ -51,11 +51,9 @@ run_bonsai_on_linux() {
             ;;
         *)
             echo "The BONSAI_RUNTIME_APPLICATION environment variable is not recognized. Please set it to either 'mono' or 'wine' to run Bonsai on linux."
-            cleanup
             exit 1
             ;;
     esac
-    cleanup
 }
 
 if [[ -v BONSAI_EXE_PATH ]]; then
@@ -69,6 +67,7 @@ if [[ -v BONSAI_EXE_PATH ]]; then
             trap cleanup EXIT INT TERM
             update_paths_to_linux
             run_bonsai_on_linux "$@"
+            cleanup
         else
             run_bonsai_on_linux "$@"
         fi

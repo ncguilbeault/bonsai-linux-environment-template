@@ -32,7 +32,7 @@
         "runtime-application-generator": {
             "type": "generated",
             "generator": "switch",
-            "replaces": "$BONSAI_RUNTIME_APPLICATION",
+            "replaces": "$(runtime-application-generator)",
             "parameters": {
                 "cases": [
                     {
