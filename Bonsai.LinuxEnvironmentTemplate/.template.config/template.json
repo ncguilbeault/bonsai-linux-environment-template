@@ -22,6 +22,29 @@
             "datatype": "bool",
             "defaultValue": "false",
             "description": "Include vscode debugger configuration files"
+        },
+        "runtime-application": {
+            "type": "parameter",
+            "datatype": "string",
+            "defaultValue": "wine",
+            "description": "Bonsai's runtime application to use on linux. Currently supported values are 'wine' and 'mono'."
+        },
+        "runtime-application-generator": {
+            "type": "generated",
+            "generator": "switch",
+            "replaces": "$BONSAI_RUNTIME_APPLICATION",
+            "parameters": {
+                "cases": [
+                    {
+                        "condition": "(runtime-application == 'wine')",
+                        "value": "\"wine\""
+                    },
+                    {
+                        "condition": "(runtime-application == 'mono')",
+                        "value": "\"mono\""
+                    }
+                ]
+            }
         }
     },
     "postActions": [{
